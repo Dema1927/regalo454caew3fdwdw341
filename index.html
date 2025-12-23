@@ -5,15 +5,20 @@
 </head>
 <body bgcolor="#0A2F1F" style="margin: 0; padding: 0; font-family: 'Georgia', serif;">
 <script>
-  var passwordSegreta = "160525"; 
-  var input = prompt("Please enter the date of our anniversary in the format DDMMYY (with no spaces, . or -)");
+  function askPassword() {
+    var input = prompt("Please enter today's date (DD/MM/YY)\nDon't be a Grinch! 🎄");
+    var cleanInput = input ? input.replace(/[\s\.\-\/\_]/g, "") : "";
 
-  if (input !== passwordSegreta) {
-    alert("Maybe u dont deserve that gift naughty girl😞");
-    document.body.innerHTML = "<h1 style='text-align:center; margin-top:100px;'></h1>";	
-    setTimeout(function(){ window.location.href = "https://google.com"; }, 000);
+    if (cleanInput === "251225") {
+      alert("CORRECT PASSWORD, ENJOY THE GIFT ❤️");
+    } else {
+      alert("Bruh, are u the Grinch? 🟢 Try again!");
+      askPassword();
+    }
   }
+  askPassword();
 </script>
+
     <br><br>
 
     <table width="1000" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#FFFFFF" style="border: 10px double #D4AF37; border-radius: 40px; overflow: hidden; box-shadow: 0px 0px 50px rgba(0,0,0,0.8);">
@@ -116,6 +121,7 @@
 </body>
 
 </html>
+
 
 
 
